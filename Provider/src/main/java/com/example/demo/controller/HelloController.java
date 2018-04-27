@@ -19,6 +19,10 @@ public class HelloController {
 	private DiscoveryClient client;
 	
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	public String hello() {
+		return "Hello from Provider"; 
+	}
+/*
 	public String index() {
 		List<ServiceInstance> instances = client.getInstances("hello-service");
 		for (int i = 0; i < instances.size(); i++) {
@@ -26,4 +30,5 @@ public class HelloController {
 		}
 		return "Hello World";
 	}
+*/
 }
